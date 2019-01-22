@@ -19,7 +19,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 ###############################################################################
 
 import rosegraphics as rg
-
+import math
 
 def main():
     """ Calls the   TEST   functions in this module. """
@@ -68,7 +68,7 @@ def distance(point):
 main()
 
 ###############################################################################
-# TODO: 2.
+# DONE: 2.
 #
 # READ the following, asking questions as needed.
 # When you believe that you understading what is says about UNIT TESTING,
