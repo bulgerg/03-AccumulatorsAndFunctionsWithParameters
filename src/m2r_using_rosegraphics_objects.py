@@ -17,7 +17,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 #     a. For the RoseGraphics coordinate system:
 #
 #        -- Where is the (0, 0) point on the screen?
-#              Center of the window
+#              Top left
 #
 #        -- In what direction on the screen
 #           does the positive X-axis point?
