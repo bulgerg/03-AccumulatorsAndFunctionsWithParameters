@@ -4,8 +4,9 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and George Bulger.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
+import math
 
 
 def main():
@@ -17,20 +18,50 @@ def main():
 def run_test_sum_cosines():
     """ Tests the   sum_cosines   function. """
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this function.
+    # DONE: 2. Implement this function.
     #   It TESTS the  sum_cosines  function defined below.
     #   Include at least **   3   ** tests.
     #
     # Use the same 4-step process as in implementing previous
     # TEST functions, including the same way to print expected/actual.
     # -------------------------------------------------------------------------
+    # Test 1:
     print()
     print('--------------------------------------------------')
     print('Testing the   sum_cosines   function:')
     print('--------------------------------------------------')
+    expected =0.13416
+    answer = sum_cosines(3)
+    print('Test 1 expected', expected)
+    print('       actual  ', answer)
 
+    # Test 2:
+    print()
+    print('--------------------------------------------------')
+    print('Testing the   sum_cosines   function:')
+    print('--------------------------------------------------')
+    expected = -0.23581
+    answer = sum_cosines(5)
+    print('Test 2 expected', expected)
+    print('       actual  ', answer)
+
+    # Test 3:
+    print()
+    print('--------------------------------------------------')
+    print('Testing the   sum_cosines   function:')
+    print('--------------------------------------------------')
+    expected = 1.54030
+    answer = sum_cosines(1)
+    print('Test 3 expected', expected)
+    print('       actual  ', answer)
 
 def sum_cosines(n):
+    a = 0
+    for k in range(n+1):
+        a = math.cos(k)+a
+    return a
+
+
     """
     What comes in:  A non-negative integer n.
     What goes out:  The sum of the cosines of the integers
@@ -41,7 +72,7 @@ def sum_cosines(n):
         cos(0) + cos(1) + cos(2) + cos(3)   which is about 0.13416.
     """
     # -------------------------------------------------------------------------
-    # TODO: 3. Implement and test this function.
+    # DONE: 3. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -53,20 +84,49 @@ def sum_cosines(n):
 def run_test_sum_square_roots():
     """ Tests the   sum_square_roots   function. """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this function.
+    # DONE: 4. Implement this function.
     #   It TESTS the  sum_square_roots  function defined below.
     #   Include at least **   3   ** tests.
     #
     # Use the same 4-step process as in implementing previous
     # TEST functions, including the same way to print expected/actual.
     # -------------------------------------------------------------------------
+    # Test 1:
     print()
     print('--------------------------------------------------')
     print('Testing the   sum_square_roots   function:')
     print('--------------------------------------------------')
+    expected = 11.854408
+    answer = sum_square_roots(5)
+    print('Test 1 expected', expected)
+    print('       actual  ', answer)
 
+    # Test 2:
+    print()
+    print('--------------------------------------------------')
+    print('Testing the   sum_square_roots   function:')
+    print('--------------------------------------------------')
+    expected = 19.06016
+    answer = sum_square_roots(7)
+    print('Test 2 expected', expected)
+    print('       actual  ', answer)
+
+    # Test 3:
+    print()
+    print('--------------------------------------------------')
+    print('Testing the   sum_square_roots   function:')
+    print('--------------------------------------------------')
+    expected = 3.41421
+    answer = sum_square_roots(2)
+    print('Test 3 expected', expected)
+    print('       actual  ', answer)
 
 def sum_square_roots(n):
+    a = 0
+    for k in range(0, 2*n+1, 2):
+        a = math.sqrt(k) + a
+    return a
+
     """
     What comes in:  A non-negative integer n.
     What goes out:  The sum of the square roots of the integers
@@ -80,7 +140,7 @@ def sum_square_roots(n):
       which is about 11.854408.
     """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement and test this function.
+    # DONE: 5. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
