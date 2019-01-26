@@ -6,18 +6,25 @@ This module demonstrates simple LOOPS of the form:
 and also USING OBJECTS.
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and George Bulger.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
 
 def main():
+    run_print_sequence1()
+    run_draw_circles1()
+    run_print_sequence2()
+    run_draw_circles2()
+    run_print_sequence3()
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
 
 def print_sequence1():
+    for k in range(0, 201, 10):
+        print(k)
     """
     Prints:
        0
@@ -28,18 +35,49 @@ def print_sequence1():
        ...
        200
     """
+
     # -------------------------------------------------------------------------
-    # TODO: 2. Implement this function, per its doc-string above.
+    # DONE: 2. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
+
+def run_print_sequence1():
+    # Test 1:
     print()
     print('--------------------------------------------------')
     print('Running print_sequence1:')
     print('--------------------------------------------------')
+    print('Test 1 expected', '0')
+    print('                10')
+    print('                20')
+    print('                30')
+    print('                40')
+    print('                50')
+    print('                60')
+    print('                70')
+    print('                80')
+    print('                90')
+    print('                100')
+    print('                110')
+    print('                120')
+    print('                130')
+    print('                140')
+    print('                150')
+    print('                160')
+    print('                170')
+    print('                180')
+    print('                190')
+    print('                200')
+    print('actual')
+    print_sequence1()
 
 
 def draw_circles1():
+    window = rg.RoseWindow(400, 400)
+    for k in range(0, 201, 10):
+        rg.Circle(rg.Point(200, 200), k)
+    window.close_on_mouse_click()
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws 21 rg.Circle objects such that:
@@ -53,13 +91,17 @@ def draw_circles1():
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # HINT: You might find a prior module useful when 'writing' this code.
     # -------------------------------------------------------------------------
+def run_draw_circles1():
     print()
     print('--------------------------------------------------')
     print('Running draw_circles1:  See graphics window')
     print('--------------------------------------------------')
+    draw_circles1()
 
 
 def print_sequence2():
+    for k in range(50, 391, 20):
+        print(k)
     """
     Prints:
       50
@@ -71,17 +113,45 @@ def print_sequence2():
       390.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement this function, per its doc-string above.
+    # DONE: 4. Implement this function, per its doc-string above.
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
+def run_print_sequence2():
+    # Test 1:
     print()
     print('--------------------------------------------------')
     print('Running print_sequence2:')
     print('--------------------------------------------------')
+    print('Test 1 expected', '0')
+    print('                50')
+    print('                70')
+    print('                90')
+    print('                110')
+    print('                130')
+    print('                150')
+    print('                170')
+    print('                190')
+    print('                210')
+    print('                230')
+    print('                250')
+    print('                270')
+    print('                290')
+    print('                310')
+    print('                330')
+    print('                350')
+    print('                370')
+    print('                390')
+    print('actual')
+    print_sequence2()
 
 
 def draw_circles2():
+    window = rg.RoseWindow(400, 400)
+    for k in range(50, 391, 20):
+        rg.Circle(rg.Point(k, 100), 10)
+        rg.Color('blue')
+    window.close_on_mouse_click()
     """
     -- Constructs an rg.RoseWindow whose width and height are both 400.
     -- Constructs and draws rg.Circle objects such that:
@@ -96,13 +166,17 @@ def draw_circles2():
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
+def run_draw_circles2():
     print()
     print('--------------------------------------------------')
     print('Running draw_circles2:  See graphics window')
     print('--------------------------------------------------')
+    draw_circles2()
 
 
 def print_sequence3():
+    for k in range(1, 101, 1):
+        print(k)
     """
     Prints:
       1
@@ -117,11 +191,19 @@ def print_sequence3():
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
+def run_print_sequence3():
     print()
     print('--------------------------------------------------')
     print('Running print_sequence3:')
     print('--------------------------------------------------')
-
+    print('Tesr 1 expected', 1)
+    print('                2')
+    print('                3')
+    print('                4')
+    print('                ...')
+    print('                100')
+    print('actual')
+    print_sequence3()
 
 def draw_circles3():
     """
