@@ -4,8 +4,8 @@ in its simplest classic forms:
    SUMMING:       total = total + number
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and George Bulger.
+"""  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 
 def main():
@@ -28,9 +28,29 @@ def run_test_sum_powers():
     print('--------------------------------------------------')
     print('Testing the   sum_powers   function:')
     print('--------------------------------------------------')
+    expected1 = 3.80826
+    actual1 = sum_powers(5, -0.3)
+    print('Test 1 expected', expected1)
+    print('       actual  ', actual1)
+
+    expected2 = 144.45655
+    actual2 = sum_powers(100, 0.1)
+    print('Test 2 expected', expected2)
+    print('       actual ', actual2)
+
+    expected3 =239.03580
+    actual3 = sum_powers(50, 0.5)
+    print('Test 3 expected', expected3)
+    print('       actual  ', actual3)
+
 
 
 def sum_powers(n, p):
+    total = 0
+    for k in range(1, n+1, 1):
+        total = k**p + total
+    return total
+
     """
     What comes in:  A non-negative integer n
                     and a number p.
@@ -66,8 +86,27 @@ def run_test_sum_powers_in_range():
     print('Testing the   sum_powers_in_range   function:')
     print('--------------------------------------------------')
 
+    expected1 = 142.384776
+    actual1 = sum_powers_in_range(3, 100, 0.1)
+    print('Test 1 expected', expected1)
+    print('       actual  ', actual1)
+
+    expected2 = 122.07366
+    actual2 = sum_powers_in_range(4, 50, 0.3)
+    print('Test 2 expected', expected2)
+    print('       actual  ', actual2)
+
+    expected3 = 256.75645
+    actual3 = sum_powers_in_range(5, 120,  0.2)
+    print('Test 3 expected', expected3)
+    print('       actual  ', actual3)
+
 
 def sum_powers_in_range(m, n, p):
+    total = 0
+    for k in range(m, n+1, 1):
+        total = k**p + total
+    return total
     """
     What comes in:  Non-negative integers m and n, with n >= m,
                     and a number p.
