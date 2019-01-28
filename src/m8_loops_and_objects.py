@@ -10,6 +10,7 @@ Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
 """  # DONE: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
+import math as m
 
 
 def main():
@@ -18,6 +19,8 @@ def main():
     run_print_sequence2()
     run_draw_circles2()
     run_print_sequence3()
+    run_print_cosines()
+    run_draw_cosines_and_sines()
     """ Calls the other functions to demonstrate and/or test them. """
     # Test your functions by putting calls to them here:
 
@@ -225,6 +228,8 @@ def draw_circles3():
 
 
 def print_cosines():
+    for k in range(0, 101, 1):
+        print(m.cos(k)*80)
     """
     For each of the integers 0  1  2  ... 100,
     prints 80 times the cosine of that integer.
@@ -254,13 +259,31 @@ def print_cosines():
     #       (note the DOT) and pausing will display options that make
     #       it plain what the notation for the cosine function is.
     # -------------------------------------------------------------------------
+def run_print_cosines():
     print()
     print('--------------------------------------------------')
     print('Running print_cosines:')
     print('--------------------------------------------------')
+    print('Test #1 expected', 80)
+    print('                  43.224184469451174')
+    print('                  -33.29174692377139')
+    print('                  -79.19939972803563')
+    print('                  -52.29148966908895')
+    print('                  22.6929748370581')
+    print('                  76.81362293202928')
+    print('                  60.31218034746437')
+    print('                  ...')
+    print('                  68.9855097830147')
+    print('actual')
+    print_cosines()
 
 
 def draw_cosines_and_sines():
+    window = rg.RoseWindow(400, 400)
+    for k in range(0, 101, 1):
+        rg.Circle(rg.Point((200 + (80*m.cos(k))), (200 + (80*m.sin(k)))), 10)
+    window.close_on_mouse_click()
+
     """
     -- Constructs a window whose width and height are both 400.
     -- Constructs and draws rg.Circle objects such that:
@@ -279,10 +302,12 @@ def draw_cosines_and_sines():
     # Put a statement in  main  to test this function.
     # REQUIREMENT: You must use a   RANGE  statement to solve this problem.
     # -------------------------------------------------------------------------
+def run_draw_cosines_and_sines():
     print()
     print('--------------------------------------------------')
     print('Running draw_cosines_and_sines:  See graphics window')
     print('--------------------------------------------------')
+    draw_cosines_and_sines()
 
 
 # -----------------------------------------------------------------------------
